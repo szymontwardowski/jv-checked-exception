@@ -4,7 +4,6 @@ public class UserService {
     public void registerUser(User user) {
         PasswordValidator validator = new PasswordValidator();
 
-
         try {
             validator.validate(user.getPassword(), user.getRepeatPassword());
             saveUser(user);
@@ -13,7 +12,7 @@ public class UserService {
         }
     }
 
-        public void saveUser(User user){
-            System.out.println("user " + user.toString() + " was saved to database!!!");
-        }
+    public void saveUser(User user) {
+        System.out.println("user " + user.toString() + " was saved to database!!!");
     }
+}
